@@ -2,6 +2,8 @@ import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import Image from "next/image";
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import Footer from "@/components/Footer";
+import GoogleMap from "@/components/GoogleMap";
 
 export const metadata: Metadata = {
   title: "Next.js Settings | TailAdmin - Next.js Dashboard Template",
@@ -9,11 +11,11 @@ export const metadata: Metadata = {
     "This is Next.js Settings page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
 };
 
-const Settings = () => {
+const Contact = () => {
   return (
     <DefaultLayout>
       <div className="mx-auto max-w-270">
-        <Breadcrumb pageName="Settings" />
+        <Breadcrumb pageName="Contact" />
 
         <div className="grid grid-cols-5 gap-8">
           <div className="col-span-5 xl:col-span-3">
@@ -317,8 +319,10 @@ const Settings = () => {
           </div>
         </div>
       </div>
+      <GoogleMap/>
+      <Footer/>
     </DefaultLayout>
   );
 };
 
-export default Settings;
+export default Contact;
