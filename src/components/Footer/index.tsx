@@ -4,8 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
-      <div className="max-w-full overflow-x-auto">
+<div className="rounded-sm border border-stroke bg-white px-5 pb-2.5 pt-6 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">      <div className="max-w-full overflow-x-auto">
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="mb-12 lg:mb-16">
               <Link href="/" className="mb-8 inline-block">
@@ -24,7 +23,7 @@ const Footer = () => {
                   height={30}
                 />
               </Link>
-              <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
+              <p className="mb-9 text-base leading-relaxed text-black dark:text-white">
                 Bliss & Blooms is a premier event planning and design company
                 based in Eldoret, Kenya. We specialize in weddings, corporate
                 events, private parties, and more.
@@ -117,7 +116,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/blog"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-pink-600 dark:text-body-color-dark dark:hover:text-pink-400"
+                    className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-pink-600  dark:hover:text-pink-400"
                   >
                     Blog
                   </Link>
@@ -125,7 +124,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/about"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-pink-600 dark:text-body-color-dark dark:hover:text-pink-400"
+                    className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-pink-600  dark:hover:text-pink-400"
                   >
                     About Us
                   </Link>
@@ -133,7 +132,7 @@ const Footer = () => {
                 <li>
                   <Link
                     href="/blog"
-                    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-pink-600 dark:text-body-color-dark dark:hover:text-pink-400"
+                    className="mb-4 inline-block text-base text-black dark:text-white duration-300 hover:text-pink-600  dark:hover:text-pink-400"
                   >
                     Events
                   </Link>
