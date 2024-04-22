@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact | Bliss and Blooms",
   description:
-    "Get in touch with Bliss and Blooms for all your wedding and event planning needs. Our experienced team is here to help you create unforgettable moments that exceed your expectations.",
+    "This is Contact Page for Bliss and Blooms",
 };
 
 const Contact = () => {

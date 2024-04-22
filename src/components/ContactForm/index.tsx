@@ -5,19 +5,26 @@ import NewsLatterBox from "../NewsLatterBox";
 const ContactForm = () => {
   return (
     <div className="mx-auto max-w-270">
-      <Breadcrumb pageName="Contact" />
-      <div className="border-b border-stroke px-7 py-4 dark:border-strokedark">
-        <h3 className="font-medium text-black dark:text-white">
-          Get in touch with Bliss and Blooms for all your wedding and event planning needs. Our experienced team is here to help you create unforgettable moments that exceed your expectations.
-        </h3>
-      </div>
+      <Breadcrumb pageName="Contact"/>
+
+      <div className="flex w-full  bg-[#34D399] bg-opacity-[15%] px-7 py-8 shadow-md dark:bg-[#1B1B24] dark:bg-opacity-30 md:p-9">
+
+        <div className="w-full">
+          <p className="text-base leading-relaxed text-body">
+            Get in touch with Bliss and Blooms for all your wedding and event planning needs. Our experienced team is here to help you create unforgettable moments that exceed your expectations.
+          </p>
+        </div>
+      </div><br />
       <div className="grid grid-cols-5 gap-8">
         <div className="col-span-5 xl:col-span-3">
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
             <div className="border-b border-stroke px-7 py-4 dark:border-strokedark">
-              <h3 className="font-medium text-black dark:text-white">
+              <h2 className="font-medium text-black dark:text-white">
                 Need Help? Open a Ticket
-              </h3>
+              </h2>
+              <p className="mb-12 text-black dark:text-white font-small ">
+                Our support team will get back to you ASAP via email.
+              </p>
             </div>
             <div className="p-7">
               <form action="#">
@@ -204,26 +211,26 @@ const ContactForm = () => {
                     </div>
                   </div>
                 </div>
-                 {/* Venue Location */}
-                 <div className="w-full sm:w-1/2">
-                    <label
-                      className="mb-3 block text-sm font-medium text-black dark:text-white"
-                      htmlFor="venuelocation"
-                    >
-                      Venue Location
-                    </label>
-                    <div className="relative">
+                {/* Venue Location */}
+                <div className="w-full sm:w-1/2">
+                  <label
+                    className="mb-3 block text-sm font-medium text-black dark:text-white"
+                    htmlFor="venuelocation"
+                  >
+                    Venue Location
+                  </label>
+                  <div className="relative">
 
-                      <input
-                        className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                        type="text"
-                        name="VenueLocation"
-                        id="VenueLocation"
-                        placeholder="Venue Location"
-                        defaultValue=""
-                      />
-                    </div>
+                    <input
+                      className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                      type="text"
+                      name="VenueLocation"
+                      id="VenueLocation"
+                      placeholder="Venue Location"
+                      defaultValue=""
+                    />
                   </div>
+                </div>
 
 
                 <div className="mb-5.5">
