@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import SidebarLinkGroup from "./SidebarLinkGroup";
-import Socials from "../Socials";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -62,11 +61,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+      className={`absolute items-center left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+        sidebarOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
     >
-      <div className="lex items-center text-center justify-between">
-        {/* <!-- SIDEBAR HEADER --> */}
+      {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link href="/">
           <Image
@@ -85,147 +84,114 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           aria-expanded={sidebarOpen}
           className="block lg:hidden"
         >
-
+          
         </button>
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
 
-      <div className="no-scrollbar text-center  flex flex-col overflow-y-auto duration-300 ease-linear">
+      <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6  text-center">
+        <nav className="mt-5 px-4 py-4 lg:mt-9 lg:px-6">
           {/* <!-- Menu Group --> */}
           <div>
             <ul className="mb-6 flex flex-col gap-1.5">
-              {/* <!-- Menu Item Dashboard --> */}
-              <SidebarLinkGroup
-                activeCondition={
-                  pathname === "/" || pathname.includes("Home")
-                }
-              >
-                {(handleClick, open) => {
-                  return (
-                    <React.Fragment>
-                      <Link
-                        href="/"
-                        className={`group relative flex text-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/" ||
-                          pathname.includes("Home")) &&
-                          "bg-graydark dark:bg-meta-4"
-                          }`}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          sidebarExpanded
-                            ? handleClick()
-                            : setSidebarExpanded(true);
-                        }}
-                      >
-                        Home
-                      </Link>
-                    </React.Fragment>
-                  );
-                }}
-              </SidebarLinkGroup>
-              {/* <!-- Menu Item Dashboard --> */}
-              {/* <!-- Menu Item Profile --> */}
+             {/* Home menu item */}
+            <SidebarLinkGroup activeCondition={pathname === "/" || pathname.includes("Home")}>
+              {(handleClick, open) => (
+                <Link
+                  href="/"
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    (pathname === "/" || pathname.includes("Home")) && "bg-graydark dark:bg-meta-4"
+                  }`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    sidebarExpanded ? handleClick() : setSidebarExpanded(true);
+                  }}
+                >
+                  HOME
+                </Link>
+              )}
+            </SidebarLinkGroup>
+            {/* Other menu items */}
+
+              {/* <!-- Menu Item About --> */}
               <li>
                 <Link
                   href="/about"
-                  className={`group relative flex text-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("about") && "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes("about") &&
+                    "bg-graydark dark:bg-meta-4"
+                  }`}
                 >
-                  About
+                  ABOUT
                 </Link>
               </li>
-              {/* <!-- Menu Item Profile --> */}
+              {/* <!-- Menu Item About --> */}
 
-              {/* <!-- Menu Item Forms --> */}
-              <SidebarLinkGroup
-                activeCondition={
-                  pathname === "/forms" || pathname.includes("forms")
-                }
-              >
-                {(handleClick, open) => {
-                  return (
-                    <React.Fragment>
-                      <Link
-                        href="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/forms" ||
-                          pathname.includes("forms")) &&
-                          "bg-graydark dark:bg-meta-4"
-                          }`}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          sidebarExpanded
-                            ? handleClick()
-                            : setSidebarExpanded(true);
-                        }}
-                      >
-                        Services
-                      </Link>
-                      {/* <!-- Dropdown Menu Start --> */}
-                      <div
-                        className={`translate transform overflow-hidden ${!open && "hidden"
-                          }`}
-                      >
-                        <ul className="mb-5.5 mt-4 flex flex-col gap-2.5 pl-6">
-                          <li>
-                            <Link
-                              href="/forms/form-elements"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black dark:text-white duration-300 ease-in-out hover:text-white ${pathname === "/forms/form-elements" &&
-                                "text-white"
-                                }`}
-                            >
-                              Form Elements
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/forms/form-layout"
-                              className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-black dark:text-white duration-300 ease-in-out hover:text-white ${pathname === "/forms/form-layout" &&
-                                "text-white"
-                                } `}
-                            >
-                              Form Layout
-                            </Link>
-                          </li>
-                        </ul>
-                      </div>
-                      {/* <!-- Dropdown Menu End --> */}
-                    </React.Fragment>
-                  );
-                }}
-              </SidebarLinkGroup>
-              {/* <!-- Menu Item Forms --> */}
-
-              {/* <!-- Menu Item Tables --> */}
+              {/* <!-- Menu Item Our Work --> */}
               <li>
                 <Link
-                  href="/tables"
-                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("tables") && "bg-graydark dark:bg-meta-4"
-                    }`}
+                  href="/our-work"
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes("our work") && "bg-graydark dark:bg-meta-4"
+                  }`}
                 >
-                  Tables
+                  OUR WORK
                 </Link>
               </li>
-              {/* <!-- Menu Item Tables --> */}
+              {/* <!-- Menu Item Our Work --> */}
+              {/* <!-- Menu Item Services --> */}
+              <li>
+                <Link
+                  href="/services"
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes("services") && "bg-graydark dark:bg-meta-4"
+                  }`}
+                >
+                  SERVICES
+                </Link>
+              </li>
+              {/* <!-- Menu Item Services --> */}
 
-              {/* <!-- Menu Item Settings --> */}
+              {/* <!-- Menu Item Contact --> */}
               <li>
                 <Link
                   href="/contact"
-                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("about") && "bg-graydark dark:bg-meta-4"
-                    }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes("contact") &&
+                    "bg-graydark dark:bg-meta-4"
+                  }`}
                 >
-                  Contact
+                  CONTACT
                 </Link>
               </li>
-              {/* <!-- Menu Item Settings --> */}
-              <br /><br />
-              <Socials />
+              {/* <!-- Menu Item Contact --> */}
             </ul>
-            {/* <!-- Sidebar Menu --> */}
+          </div>
+
+          {/* <!-- Others Group --> */}
+          <div>
+            <h3 className="mb-4 ml-4 text-sm font-semibold text-black dark:text-white">
+              OTHERS
+            </h3>
+
+            <ul className="mb-6 flex flex-col gap-1.5">
+              {/* <!-- Menu Item Chart --> */}
+              <li>
+                <Link
+                  href="/chart"
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                    pathname.includes("chart") && "bg-graydark dark:bg-meta-4"
+                  }`}
+                >
+                  Chart
+                </Link>
+              </li>
+              {/* <!-- Menu Item Chart --> */}
+            </ul>
           </div>
         </nav>
-      </div>
+        {/* <!-- Sidebar Menu --> */}
       </div>
     </aside>
   );
