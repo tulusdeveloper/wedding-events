@@ -6,10 +6,33 @@ const Socials = () => {
 
   return (
     <div className="mt-6.5">
-                <h4 className="mb-3.5 font-medium text-black dark:text-white">
-                  Follow Us on
-                </h4>
-                <div className="flex items-center justify-center gap-3.5">
+      <hr />
+        <div className="mb-12 lg:mb-16 text-center items-center">
+              <ul>
+                <li>
+                  <p className="text-black dark:text-white">
+                    {" "}
+                    <a
+                      href="mailto:info@blissnblooms.com"
+                      className="text-black dark:text-white hover:underline"
+                    >
+                      info@blissnblooms.com
+                    </a>
+                  </p>
+                </li>
+                <li>
+                  <p className=" text-black dark:text-white">
+                    {" "}
+                    <a
+                      href="tel:+254712345678"
+                      className="text-black dark:text-white hover:underline"
+                    >
+                      +254 712 345 678
+                    </a>
+                  </p>
+                </li>
+              </ul>
+              <div className="flex items-center justify-center gap-3.5">
                   <Link
                     href="https://www.facebook.com/eventsbyNiki1"
                     className="hover:text-primary"
@@ -99,6 +122,7 @@ const Socials = () => {
                     </svg>
                   </Link>
                 </div>
+            </div>
               </div>
   );
 };

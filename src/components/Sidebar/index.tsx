@@ -65,7 +65,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
     >
-      {/* <!-- SIDEBAR HEADER --> */}
+      <div className="lex items-center text-center justify-between">
+        {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <Link href="/">
           <Image
@@ -106,8 +107,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <Link
                         href="/"
-                        className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/" ||
-                            pathname.includes("Home")) &&
+                        className={`group relative flex text-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/" ||
+                          pathname.includes("Home")) &&
                           "bg-graydark dark:bg-meta-4"
                           }`}
                         onClick={(e) => {
@@ -128,7 +129,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <Link
                   href="/about"
-                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("about") && "bg-graydark dark:bg-meta-4"
+                  className={`group relative flex text-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("about") && "bg-graydark dark:bg-meta-4"
                     }`}
                 >
                   About
@@ -148,7 +149,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       <Link
                         href="#"
                         className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === "/forms" ||
-                            pathname.includes("forms")) &&
+                          pathname.includes("forms")) &&
                           "bg-graydark dark:bg-meta-4"
                           }`}
                         onClick={(e) => {
@@ -218,49 +219,13 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 </Link>
               </li>
               {/* <!-- Menu Item Settings --> */}
+              <br /><br />
+              <Socials />
             </ul>
-          </div><br />
-
-          {/* <!-- Sidebar Menu --> */}
-          <hr /><br />
-          <div className="mb-12 lg:mb-16 text-center items-center">
-            <ul>
-              <li>
-                <p className="text-black dark:text-white">
-                  {" "}
-                  <a
-                    href="mailto:info@blissnblooms.com"
-                    className="text-black dark:text-white hover:underline"
-                  >
-                    info@blissnblooms.com
-                  </a>
-                </p>
-              </li>
-              <li>
-                <p className=" text-black dark:text-white">
-                  {" "}
-                  <a
-                    href="tel:+254712345678"
-                    className="text-black dark:text-white hover:underline"
-                  >
-                    +254 712 345 678
-                  </a>
-                </p>
-              </li>
-              <li>
-                <p className="text-black dark:text-white">
-                  {" "}
-                  <span className="text-black dark:text-white">
-                    Bliss & Blooms HQ, Eldoret, Kenya
-                  </span>
-                </p>
-              </li>
-              {/* <!-- Other contact information --> */}
-            </ul>
-          </div><hr />
-          <Socials />
-
+            {/* <!-- Sidebar Menu --> */}
+          </div>
         </nav>
+      </div>
       </div>
     </aside>
   );

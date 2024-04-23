@@ -6,15 +6,6 @@ const ContactForm = () => {
   return (
     <div className="mx-auto max-w-270">
       <Breadcrumb pageName="Contact"/>
-
-      <div className="flex w-full  bg-[#34D399] bg-opacity-[15%] px-7 py-8 shadow-md dark:bg-[#1B1B24] dark:bg-opacity-30 md:p-9">
-
-        <div className="w-full">
-          <p className="text-base leading-relaxed text-body">
-            Get in touch with Bliss and Blooms for all your wedding and event planning needs. Our experienced team is here to help you create unforgettable moments that exceed your expectations.
-          </p>
-        </div>
-      </div><br />
       <div className="grid grid-cols-5 gap-8">
         <div className="col-span-5 xl:col-span-3">
           <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
