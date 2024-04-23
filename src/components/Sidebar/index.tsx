@@ -96,22 +96,17 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           <div>
             <ul className="mb-6 flex flex-col gap-1.5">
              {/* Home menu item */}
-            <SidebarLinkGroup activeCondition={pathname === "/" || pathname.includes("Home")}>
-              {(handleClick, open) => (
+             <li>
                 <Link
                   href="/"
                   className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    (pathname === "/" || pathname.includes("Home")) && "bg-graydark dark:bg-meta-4"
+                    pathname.includes("Home") &&
+                    "bg-graydark dark:bg-meta-4"
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    sidebarExpanded ? handleClick() : setSidebarExpanded(true);
-                  }}
                 >
                   HOME
                 </Link>
-              )}
-            </SidebarLinkGroup>
+              </li>
             {/* Other menu items */}
 
               {/* <!-- Menu Item About --> */}
