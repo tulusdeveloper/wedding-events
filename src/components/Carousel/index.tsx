@@ -51,16 +51,20 @@ const Carousel = ({ data }: { data: { image: string }[] }) => {
                 <button
                     disabled={currentImg === 0}
                     onClick={() => setCurrentImg(prev => prev - 1)}
-                    className={`border px-4 py-2 font-bold ${currentImg === 0 && 'opacity-50'}`}
+                    className={`carousel-nav-btn ${currentImg === 0 && 'opacity-50'}`}
                 >
-                    {"<"}
+                    <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
+                    </svg>
                 </button>
                 <button
                     disabled={currentImg === data.length - 1}
                     onClick={() => setCurrentImg(prev => prev + 1)}
-                    className={`border px-4 py-2 font-bold ${currentImg === data.length - 1 && 'opacity-50'}`}
+                    className={`carousel-nav-btn ${currentImg === data.length - 1 && 'opacity-50'}`}
                 >
-                    {">"}
+                    <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                        <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+                    </svg>
                 </button>
             </div>
         </div>
