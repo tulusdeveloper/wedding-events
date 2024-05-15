@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Image from 'next/image'; // Import next/image
 
 // Import Swiper modules
 import { Pagination } from 'swiper/modules';
@@ -42,11 +43,12 @@ const Carousel = ({ data }: { data: { image: string }[] }) => {
                     {/* Map through data to render images */}
                     {data.map((v, i) => (
                         <div key={i} className='relative shrink-0 w-full h-full'>
-                            <img
-                                className='pointer-events-none'
+                            {/* Use next/image for optimized image */}
+                            <Image
                                 alt={`carousel-image-${i}`}
                                 src={`/images/slider/${v.image}`}
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                layout="fill" // Use "fill" layout
+                                objectFit="cover" // Use "cover" objectFit
                             />
                         </div>
                     ))}
