@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 const servicesData = [
   {
-    image: '/images/services/service1.jpg',
+    image: '/images/services/service6.jpg',
     alt: 'Luxury Wedding',
     title: 'Weddings',
     description: 'LUXURY WEDDINGS',
   },
   {
-    image: '/images/services/service2.jpg',
+    image: '/images/services/service11.jpg',
     alt: 'Corporate Event',
     title: 'Corporate',
     description: 'CORPORATE EVENTS',
