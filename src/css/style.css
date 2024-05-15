@@ -241,3 +241,11 @@ input[type="search"]::-webkit-search-cancel-button {
 [x-cloak] {
     display: none !important;
 }
+
+.carousel-container {
+    @apply w-full md:w-4/5 lg:w-3/4 xl:w-1/2;
+  }
+  
+  .carousel-nav-btn {
+    @apply mx-2 p-2 rounded-full bg-white text-pink-600 transition-colors duration-300 hover:bg-pink-600 hover:text-white shadow-md;
+  }
