@@ -9,7 +9,7 @@ const AboutUs = () => {
             src="/images/about/cover.jpg"
             alt="Bliss & Blooms"
             width={1000}
-            height={1200} // Increase the image height
+            height={1200}
           />
           <p className="absolute bottom-0 left-0 right-0 p-4 bg-black text-white text-center font-semibold">
             Bliss & Blooms Kenya
@@ -29,7 +29,7 @@ const AboutUs = () => {
           We take pride in getting to know you, building a relationship with you that lasts beyond the event. We aim to
           add your personal touch, taste and style to every aspect of your event. Our design team and in-house
           fabrication workshop ensure that we are able to create highly customized props and accessories to your
-          event's theme.
+          events theme.
         </p>
         <p className="mb-4 text-gray-700 dark:text-gray-300">The limit to design is your imagination.</p>
       </div>
