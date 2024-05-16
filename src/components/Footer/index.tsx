@@ -25,7 +25,7 @@ const Footer = () => {
               </Link>
               <p className="mb-9 text-base leading-relaxed text-black dark:text-white">
                 Bliss & Blooms is a premier event planning and design company
-                based in Eldoret, Kenya. We specialize in weddings, corporate
+                based in Eldoret and Nairobi, Kenya. We specialize in weddings, corporate
                 events, private parties, and more.
               </p>
               <div className="flex items-center space-x-6">

@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Footer";
 import Carousel from "../Carousel";
 import OurServices from "../OurServices";
+import FAQSection from "../FAQSection";
 
 const ECommerce: React.FC = () => {
   const data = [
@@ -19,6 +20,7 @@ const ECommerce: React.FC = () => {
       </div>
       <Carousel data={data} />
       <OurServices/>
+      <FAQSection/>
       <Footer />
     </>
   );
