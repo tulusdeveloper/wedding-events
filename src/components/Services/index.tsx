@@ -20,15 +20,30 @@ const servicesData = [
     title: 'Destination',
     description: 'DESTINATION WEDDINGS',
   },
+  {
+    image: '/images/services/service7.jpg',
+    alt: 'Little Celebrations',
+    title: 'Little Celebrations',
+    description: 'LITTLE CELEBRATIONS',
+  },
+  {
+    image: '/images/services/service8.jpg',
+    alt: 'Private Event',
+    title: 'Private Events',
+    description: 'PRIVATE EVENTS',
+  },
+  {
+    image: '/images/services/service4.jpg',
+    alt: 'Planning & Coordination',
+    title: 'Planning & Coordination',
+    description: 'PLANNING AND COORDINATION',
+  },
 ];
 
-const OurServices: React.FC = () => {
+const Services: React.FC = () => {
   return (
     <div className="bg-gray-100 py-12 dark:bg-boxdark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-black dark:text-white text-left mb-8">
-          Our Services
-        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
             <div
@@ -55,4 +70,4 @@ const OurServices: React.FC = () => {
   );
 };
 
-export default OurServices;
+export default Services;

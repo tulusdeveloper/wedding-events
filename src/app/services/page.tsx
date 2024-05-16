@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import Footer from "@/components/Footer";
-import GoogleMap from "@/components/GoogleMap";
-import ContactForm from "@/components/ContactForm";
+import Services from "@/components/Services";
+import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Contact | Bliss and Blooms",
@@ -13,9 +13,8 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <DefaultLayout>
-      <ContactForm/>
-      <br/>
-      <GoogleMap/><br/>
+      <Breadcrumb pageName="Our Services" />
+      <Services/>
       <Footer/>
     </DefaultLayout>
   );
