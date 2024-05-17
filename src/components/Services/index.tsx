@@ -42,7 +42,7 @@ const servicesData = [
 
 const Services: React.FC = () => {
   return (
-    <div className="bg-gray-100 py-12 dark:bg-boxdark">
+    <div className="flex justify-center mb-6" >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
