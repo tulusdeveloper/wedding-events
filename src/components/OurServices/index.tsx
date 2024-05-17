@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const servicesData = [
   {
@@ -22,20 +23,26 @@ const servicesData = [
   },
 ];
 
-const OurServices: React.FC = () => {
-  return (
-    <div className="flex justify-center mb-6">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-extrabold text-black dark:text-white text-left mb-8">
-          Our Services
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-default dark:bg-strokedark dark:border-strokedark overflow-hidden relative transition duration-300 transform hover:scale-105"
-              style={{ minHeight: '360px' }}
-            >
+const OurServices: React.FC = () => (
+  <div className="flex justify-center mb-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 className="text-3xl font-extrabold text-black dark:text-white text-left mb-8">
+        Our Services
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesData.map((service, index) => (
+          <Link
+            key={index}
+            href={{
+              pathname: `/services/${service.title.toLowerCase()}`,
+              query: {
+                image: service.image.split('/').pop()?.split('.')[0],
+                title: service.title,
+                description: service.description,
+              },
+            }}
+          >
+            <div className="bg-white rounded-lg shadow-default dark:bg-strokedark dark:border-strokedark overflow-hidden relative transition duration-300 transform hover:scale-105" style={{ minHeight: '360px' }}>
               <Image
                 src={service.image}
                 alt={service.alt}
@@ -48,11 +55,11 @@ const OurServices: React.FC = () => {
                 <p>{service.description}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default OurServices;
