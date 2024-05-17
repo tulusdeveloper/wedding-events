@@ -52,21 +52,16 @@ const events = [
 
 const EventGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredEvents = selectedCategory === 'All'
-    ? events
-    : events.filter((event) => event.category === selectedCategory);
+  const filteredEvents = selectedCategory === 'All' ? events : events.filter((event) => event.category === selectedCategory);
 
   return (
-    <div>
-      <div className="flex justify-center mb-6">
+    <div className="container mx-auto px-4">
+      <div className="flex flex-wrap justify-center mb-6">
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 mx-2 rounded-md ${
-              selectedCategory === category
-                ? 'bg-pink-400 text-white'
-                : 'bg-white text-black'
+            className={`px-4 py-2 mx-2 mb-2 rounded-md ${
+              selectedCategory === category ? 'bg-pink-400 text-white' : 'bg-white text-black'
             }`}
             onClick={() => setSelectedCategory(category)}
           >
