@@ -32,12 +32,37 @@
           "whatSetsUsApart": "Tailored Solutions for Every Occasion",
           "exquisiteFloralDesign": "Professional Excellence",
           "exclusiveVenues": "Innovative Concepts, Impeccable Execution",
-          "coutureWeddingDesign": "Couture Wedding Design",
           "faq": "Frequently Asked Questions"
         },
         "whatSetsUsApart": "From high-profile conferences to annual gala dinners and product launches, we offer a comprehensive range of services to meet your corporate event needs. Our goal is to create an immersive experience that leaves a lasting impression on your clients, partners, and employees..",
         "exquisiteFloralDesign": "We pride ourselves on delivering events that reflect the professionalism and excellence of your brand. Our team of seasoned event planners handles every aspect, from strategic planning to flawless execution, ensuring a smooth and impactful event.",
         "exclusiveVenues": "Whether you are looking for a sophisticated gala, a thought-provoking seminar, or an engaging team-building session, we bring innovative concepts to the table. Our commitment to impeccable execution guarantees that your corporate events will be memorable and meaningful.",
+        "faq": [
+          { "question": "What defines a corporate event planner do?", "answer": "A corporate occasion planner arranges and blends various aspects of corporate occasions, including logistics, venue selection, catering, and entertainment. They confirm that the event aligns with the company's Dream and leaves a lasting imprint on the attendees." },
+          { "question": "How should I budget for an event organizer in Kenya?", "answer": "The fee for hiring an event planner in Kenya varies depending on the height and complexity of your affair. It's suggested to get quotations from several commercial occasion organizers in Nairobi or other parts of Kenya to compare costs and services." },
+          { "question": "Which event planners are the most lucrative?", "answer": "Occasion planners perfect for commercial events, luxury marriages, and large-scale general events generally have higher earning possibilities due to the higher budgets and complexities interested in these events." },
+
+          { "question": "What are the steps to plan an event in Kenya?", "answer": "To schedule an event in Kenya: Begin by defining your goals and budget. Select the right venue, preferably in a major location.  Hire an experienced corporate occasion planner in Kenya to handle the details, from catering to enjoyment.  Assure compliance with all regulations and promote your event effectively. " }
+
+        ]
+      }
+    },
+    {
+      "image": "/images/services/service3.jpg",
+      "alt": "Destination Wedding",
+      "title": "Destination",
+      "description": "DESTINATION WEDDINGS",
+      "additionalDetails": {
+        "sectionTitles": {
+          "whatSetsUsApart": "What Sets Us Apart",
+          "exquisiteFloralDesign": "Exquisite Floral Design",
+          "exclusiveVenues": "Exclusive Venues",
+          "coutureWeddingDesign": "Couture Wedding Design",
+          "faq": "Frequently Asked Questions"
+        },
+        "whatSetsUsApart": "Bespoke Elegance: Our commitment lies in curating bespoke weddings that go beyond expectations.",
+        "exquisiteFloralDesign": "Elevate your celebration with our world-class floral arrangements. From cascading centerpieces to elegant bridal bouquets, our floral designs are a statement of opulence.",
+        "exclusiveVenues": "We collaborate with the most prestigious venues all around East Africa, offering a selection of stunning locations that serve as the perfect canvas for your love story.",
         "coutureWeddingDesign": "Immerse yourself in the luxury of custom-designed weddings. Our team of experienced designers ensures that every element, from the invitation suite to the ceremony backdrop, is a true reflection of your vision.",
         "faq": [
           { "question": "What defines a luxury wedding planner?", "answer": "A luxury wedding planner is characterized by their attention to detail, personalized service, and ability to create bespoke weddings that reflect the unique style and story of the couple." },
@@ -47,9 +72,9 @@
     },
     {
       "image": "/images/services/service3.jpg",
-      "alt": "Destination Wedding",
-      "title": "Destination",
-      "description": "DESTINATION WEDDINGS",
+      "alt": "Little Celebration",
+      "title": "Little Celebration",
+      "description": "LITTLE CELEBRATION",
       "additionalDetails": {
         "sectionTitles": {
           "whatSetsUsApart": "What Sets Us Apart",

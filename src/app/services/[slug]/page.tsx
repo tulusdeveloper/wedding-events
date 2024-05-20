@@ -55,30 +55,30 @@ const ServiceDetails = () => {
               className="w-full h-96 object-cover"
             />
           </div>
-          <div className="md:w-1/2 p-6">
+          <div className="md:w-1/2 p-6 " >
             <h2 className="text-3xl font-bold mb-4">{title}</h2>
-            <p className="text-lg">{description}</p>
+            <p className="text-lg text-black dark:text-white">{description}</p>
             {additionalDetails.whatSetsUsApart && (
               <div>
-                <h3 className="text-2xl font-semibold mt-6 font-display">{additionalDetails.sectionTitles.whatSetsUsApart}</h3>
+                <h3 className="text-2xl font-semibold mt-6 font-display text-black dark:text-white ">{additionalDetails.sectionTitles.whatSetsUsApart}</h3>
                 <p>{additionalDetails.whatSetsUsApart}</p>
               </div>
             )}
             {additionalDetails.exquisiteFloralDesign && (
               <div>
-                <h3 className="text-2xl font-semibold mt-6 font-display">{additionalDetails.sectionTitles.exquisiteFloralDesign}</h3>
+                <h3 className="text-2xl font-semibold mt-6 font-display text-black dark:text-white">{additionalDetails.sectionTitles.exquisiteFloralDesign}</h3>
                 <p>{additionalDetails.exquisiteFloralDesign}</p>
               </div>
             )}
             {additionalDetails.exclusiveVenues && (
               <div>
-                <h3 className="text-2xl font-semibold mt-6 font-display">{additionalDetails.sectionTitles.exclusiveVenues}</h3>
+                <h3 className="text-2xl font-semibold mt-6 font-display text-black dark:text-white">{additionalDetails.sectionTitles.exclusiveVenues}</h3>
                 <p>{additionalDetails.exclusiveVenues}</p>
               </div>
             )}
             {additionalDetails.coutureWeddingDesign && (
               <div>
-                <h3 className="text-2xl font-semibold mt-6 font-display">{additionalDetails.sectionTitles.coutureWeddingDesign}</h3>
+                <h3 className="text-2xl font-semibold mt-6 font-display text-black dark:text-white">{additionalDetails.sectionTitles.coutureWeddingDesign}</h3>
                 <p>{additionalDetails.coutureWeddingDesign}</p>
               </div>
             )}
