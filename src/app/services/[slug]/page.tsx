@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
 import Footer from "@/components/Footer";
+import { useState } from 'react';
 
 type FAQItem = {
   question: string;
@@ -33,6 +34,12 @@ const ServiceDetails = () => {
   const title = searchParams.get('title') || 'Default Title';
   const description = searchParams.get('description') || 'Default Description';
   const additionalDetails: AdditionalDetails = JSON.parse(searchParams.get('additionalDetails') || '{}');
+  
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleAnswer = (index: number) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   return (
     <DefaultLayout>
@@ -78,14 +85,28 @@ const ServiceDetails = () => {
             {additionalDetails.faq && additionalDetails.faq.length > 0 && (
               <div>
                 <h3 className="text-2xl font-semibold mt-6 font-display">{additionalDetails.sectionTitles.faq}</h3>
-                <ul className="mt-4">
+                <div className="space-y-4 mt-4">
                   {additionalDetails.faq.map((faqItem: FAQItem, index: number) => (
-                    <li key={index} className="mb-4">
-                      <h4 className="text-lg font-medium">{faqItem.question}</h4>
-                      <p>{faqItem.answer}</p>
-                    </li>
+                    <div key={index} className="bg-white rounded-lg shadow-md dark:border-strokedark dark:bg-boxdark ">
+                      <button
+                        className="w-full text-left px-6 py-4 font-semibold focus:outline-none"
+                        onClick={() => toggleAnswer(index)}
+                      >
+                        <span className="flex items-center justify-between text-black dark:text-white">
+                          {faqItem.question}
+                          <span className={`transform transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}>
+                            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                          </span>
+                        </span>
+                      </button>
+                      {activeIndex === index && faqItem.answer && (
+                        <div className="p-6 border-t border-gray-300 text-black dark:text-white">{faqItem.answer}</div>
+                      )}
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             )}
           </div>

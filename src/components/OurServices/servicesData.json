@@ -1,0 +1,72 @@
+[
+    {
+      "image": "/images/services/service6.jpg",
+      "alt": "Luxury Wedding",
+      "title": "Weddings",
+      "description": "LUXURY WEDDINGS",
+      "additionalDetails": {
+        "sectionTitles": {
+          "whatSetsUsApart": "What Sets Us Apart",
+          "exquisiteFloralDesign": "Exquisite Floral Design",
+          "exclusiveVenues": "Exclusive Venues",
+          "coutureWeddingDesign": "Couture Wedding Design",
+          "faq": "Frequently Asked Questions"
+        },
+        "whatSetsUsApart": "Bespoke Elegance: Our commitment lies in curating bespoke weddings that go beyond expectations.",
+        "exquisiteFloralDesign": "Elevate your celebration with our world-class floral arrangements. From cascading centerpieces to elegant bridal bouquets, our floral designs are a statement of opulence.",
+        "exclusiveVenues": "We collaborate with the most prestigious venues all around East Africa, offering a selection of stunning locations that serve as the perfect canvas for your love story.",
+        "coutureWeddingDesign": "Immerse yourself in the luxury of custom-designed weddings. Our team of experienced designers ensures that every element, from the invitation suite to the ceremony backdrop, is a true reflection of your vision.",
+        "faq": [
+          { "question": "What defines a luxury wedding planner?", "answer": "A luxury wedding planner is characterized by their attention to detail, personalized service, and ability to create bespoke weddings that reflect the unique style and story of the couple." },
+          { "question": "How can I select a reliable wedding planner in Kenya?", "answer": "Look for a wedding planner with a strong portfolio, positive client testimonials, and a clear understanding of your vision and needs." }
+        ]
+      }
+    },
+    {
+      "image": "/images/services/service11.jpg",
+      "alt": "Corporate Event",
+      "title": "Corporate",
+      "description": "CORPORATE EVENTS",
+      "additionalDetails": {
+        "sectionTitles": {
+          "whatSetsUsApart": "Tailored Solutions for Every Occasion",
+          "exquisiteFloralDesign": "Professional Excellence",
+          "exclusiveVenues": "Innovative Concepts, Impeccable Execution",
+          "coutureWeddingDesign": "Couture Wedding Design",
+          "faq": "Frequently Asked Questions"
+        },
+        "whatSetsUsApart": "From high-profile conferences to annual gala dinners and product launches, we offer a comprehensive range of services to meet your corporate event needs. Our goal is to create an immersive experience that leaves a lasting impression on your clients, partners, and employees..",
+        "exquisiteFloralDesign": "We pride ourselves on delivering events that reflect the professionalism and excellence of your brand. Our team of seasoned event planners handles every aspect, from strategic planning to flawless execution, ensuring a smooth and impactful event.",
+        "exclusiveVenues": "Whether you are looking for a sophisticated gala, a thought-provoking seminar, or an engaging team-building session, we bring innovative concepts to the table. Our commitment to impeccable execution guarantees that your corporate events will be memorable and meaningful.",
+        "coutureWeddingDesign": "Immerse yourself in the luxury of custom-designed weddings. Our team of experienced designers ensures that every element, from the invitation suite to the ceremony backdrop, is a true reflection of your vision.",
+        "faq": [
+          { "question": "What defines a luxury wedding planner?", "answer": "A luxury wedding planner is characterized by their attention to detail, personalized service, and ability to create bespoke weddings that reflect the unique style and story of the couple." },
+          { "question": "How can I select a reliable wedding planner in Kenya?", "answer": "Look for a wedding planner with a strong portfolio, positive client testimonials, and a clear understanding of your vision and needs." }
+        ]
+      }
+    },
+    {
+      "image": "/images/services/service3.jpg",
+      "alt": "Destination Wedding",
+      "title": "Destination",
+      "description": "DESTINATION WEDDINGS",
+      "additionalDetails": {
+        "sectionTitles": {
+          "whatSetsUsApart": "What Sets Us Apart",
+          "exquisiteFloralDesign": "Exquisite Floral Design",
+          "exclusiveVenues": "Exclusive Venues",
+          "coutureWeddingDesign": "Couture Wedding Design",
+          "faq": "Frequently Asked Questions"
+        },
+        "whatSetsUsApart": "Bespoke Elegance: Our commitment lies in curating bespoke weddings that go beyond expectations.",
+        "exquisiteFloralDesign": "Elevate your celebration with our world-class floral arrangements. From cascading centerpieces to elegant bridal bouquets, our floral designs are a statement of opulence.",
+        "exclusiveVenues": "We collaborate with the most prestigious venues all around East Africa, offering a selection of stunning locations that serve as the perfect canvas for your love story.",
+        "coutureWeddingDesign": "Immerse yourself in the luxury of custom-designed weddings. Our team of experienced designers ensures that every element, from the invitation suite to the ceremony backdrop, is a true reflection of your vision.",
+        "faq": [
+          { "question": "What defines a luxury wedding planner?", "answer": "A luxury wedding planner is characterized by their attention to detail, personalized service, and ability to create bespoke weddings that reflect the unique style and story of the couple." },
+          { "question": "How can I select a reliable wedding planner in Kenya?", "answer": "Look for a wedding planner with a strong portfolio, positive client testimonials, and a clear understanding of your vision and needs." }
+        ]
+      }
+    }
+  ]
+  
