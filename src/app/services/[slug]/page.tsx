@@ -56,8 +56,8 @@ const ServiceDetails = () => {
             />
           </div>
           <div className="md:w-1/2 p-6 " >
-            <h2 className="text-3xl font-bold mb-4">{title}</h2>
-            <p className="text-lg text-black dark:text-white">{description}</p>
+            {/* <h2 className="text-3xl font-bold mb-4">{title}</h2>
+            <p className="text-lg text-black dark:text-white">{description}</p> */}
             {additionalDetails.whatSetsUsApart && (
               <div>
                 <h3 className="text-2xl font-semibold mt-6 font-display text-black dark:text-white ">{additionalDetails.sectionTitles.whatSetsUsApart}</h3>
@@ -84,7 +84,7 @@ const ServiceDetails = () => {
             )}
             {additionalDetails.faq && additionalDetails.faq.length > 0 && (
               <div>
-                <h3 className="text-2xl font-semibold mt-6 font-display">{additionalDetails.sectionTitles.faq}</h3>
+                <h3 className="text-2xl font-semibold mt-6 font-display text-black dark:text-white">{additionalDetails.sectionTitles.faq}</h3>
                 <div className="space-y-4 mt-4">
                   {additionalDetails.faq.map((faqItem: FAQItem, index: number) => (
                     <div key={index} className="bg-white rounded-lg shadow-md dark:border-strokedark dark:bg-boxdark ">
@@ -92,7 +92,7 @@ const ServiceDetails = () => {
                         className="w-full text-left px-6 py-4 font-semibold focus:outline-none"
                         onClick={() => toggleAnswer(index)}
                       >
-                        <span className="flex items-center justify-between text-black dark:text-white">
+                        <span className="flex items-center justify-between text-pink-950 dark:text-pink-100">
                           {faqItem.question}
                           <span className={`transform transition-transform ${activeIndex === index ? 'rotate-180' : ''}`}>
                             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -102,7 +102,7 @@ const ServiceDetails = () => {
                         </span>
                       </button>
                       {activeIndex === index && faqItem.answer && (
-                        <div className="p-6 border-t border-gray-300 text-black dark:text-white">{faqItem.answer}</div>
+                        <div className="p-6 border-t border-gray-300 text-pink-500 dark:text-pink-200">{faqItem.answer}</div>
                       )}
                     </div>
                   ))}
