@@ -66,14 +66,14 @@ const events = [
       ],
     },
     {
-        id: 6,
+        id: 7,
         imageUrl: '/images/events/event6.jpg',
-        title: "Haris's 1st Birthday",
+        title: "National County Performance",
         category: 'Corporate',
         images: [
-          '/images/events/shivani-purav-1.jpg',
-          '/images/events/shivani-purav-2.jpg',
-          '/images/events/shivani-purav-3.jpg',
+          '/images/events/event1.jpg',
+          '/images/events/event2.jpg',
+          '/images/events/event3.jpg',
         ],
       },
   ];
