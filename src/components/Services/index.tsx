@@ -1,56 +1,26 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import servicesData from '../servicesData.json'; 
 
-const servicesData = [
-  {
-    image: '/images/services/service6.jpg',
-    alt: 'Luxury Wedding',
-    title: 'Weddings',
-    description: 'LUXURY WEDDINGS',
-  },
-  {
-    image: '/images/services/service11.jpg',
-    alt: 'Corporate Event',
-    title: 'Corporate',
-    description: 'CORPORATE EVENTS',
-  },
-  {
-    image: '/images/services/service3.jpg',
-    alt: 'Destination Wedding',
-    title: 'Destination',
-    description: 'DESTINATION WEDDINGS',
-  },
-  {
-    image: '/images/services/service7.jpg',
-    alt: 'Little Celebrations',
-    title: 'Little Celebrations',
-    description: 'LITTLE CELEBRATIONS',
-  },
-  {
-    image: '/images/services/service8.jpg',
-    alt: 'Private Event',
-    title: 'Private Events',
-    description: 'PRIVATE EVENTS',
-  },
-  {
-    image: '/images/services/service4.jpg',
-    alt: 'Planning & Coordination',
-    title: 'Planning & Coordination',
-    description: 'PLANNING AND COORDINATION',
-  },
-];
-
-const Services: React.FC = () => {
-  return (
-    <div className="flex justify-center mb-6" >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {servicesData.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-default dark:bg-strokedark dark:border-strokedark overflow-hidden relative transition duration-300 transform hover:scale-105"
-              style={{ minHeight: '360px' }}
-            >
+const Services: React.FC = () => (
+  <div className="flex justify-center mb-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesData.map((service, index) => (
+          <Link
+            key={index}
+            href={{
+              pathname: `/services/${service.title.toLowerCase()}`,
+              query: {
+                image: service.image.split('/').pop()?.split('.')[0],
+                title: service.title,
+                description: service.description,
+                additionalDetails: JSON.stringify(service.additionalDetails), 
+              },
+            }}
+          >
+            <div className="bg-white rounded-lg shadow-default dark:bg-strokedark dark:border-strokedark overflow-hidden relative transition duration-300 transform hover:scale-105" style={{ minHeight: '360px' }}>
               <Image
                 src={service.image}
                 alt={service.alt}
@@ -63,11 +33,11 @@ const Services: React.FC = () => {
                 <p>{service.description}</p>
               </div>
             </div>
-          ))}
-        </div>
+          </Link>
+        ))}
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Services;

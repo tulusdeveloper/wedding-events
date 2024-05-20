@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import servicesData from './servicesData.json'; 
+import servicesData from '../servicesData.json'; 
 
 const OurServices: React.FC = () => (
   <div className="flex justify-center mb-6">
@@ -19,7 +19,7 @@ const OurServices: React.FC = () => (
                 image: service.image.split('/').pop()?.split('.')[0],
                 title: service.title,
                 description: service.description,
-                additionalDetails: JSON.stringify(service.additionalDetails), // pass additional details as a JSON string
+                additionalDetails: JSON.stringify(service.additionalDetails), 
               },
             }}
           >
