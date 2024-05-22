@@ -125,102 +125,15 @@ const ContactForm = () => {
                     />
                   </div>
                 </div>
-                <div className="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                  {/* Date of Event */}
-                  <div className="w-full sm:w-1/2">
-                    <label
-                      className="mb-3 block text-sm font-medium text-black dark:text-white"
-                      htmlFor="eventdate"
-                    >
-                      Event Date
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="date"
-                        placeholder="Select event date"
-                        className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                      />
-                    </div>
-                  </div>
-                  {/* Type of Event */}
-                  <div className="w-full sm:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="eventType"
-                        className="mb-3 block text-sm font-medium text-black dark:text-white"
-                      >
-                        Event Type
-                      </label>
-                      <select
-                        className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                      >
-                        <option value="">Select event type</option>
-                        <option value="wedding">Wedding</option>
-                        <option value="corporate">Corporate Event</option>
-                        <option value="birthday">Private Party</option>
-                        <option value="birthday">Little Celebration</option>
-                      </select>
-                    </div>
-                  </div>
-
-                </div>
-                <div className="mb-5.5 flex flex-col gap-5.5 sm:flex-row">
-                  {/* Number of guests */}
-                  <div className="w-full px-4 md:w-1/2">
-                    <div className="mb-8">
-                      <label
-                        htmlFor="guests"
-                        className="mb-3 block text-sm font-medium text-black dark:text-white"
-                      >
-                        No. of Guests
-                      </label>
-                      <input
-                        type="number"
-                        placeholder="Enter number of guests"
-                        className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                      />
-                    </div>
-                  </div>
-                  {/* Venue Name */}
-                  <div className="w-full sm:w-1/2">
-                    <label
-                      className="mb-3 block text-sm font-medium text-black dark:text-white"
-                      htmlFor="venuename"
-                    >
-                      Venue Name
-                    </label>
-                    <div className="relative">
-
-                      <input
-                        className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                        type="text"
-                        name="VenueName"
-                        id="VenueName"
-                        placeholder="Venue"
-                        defaultValue=""
-                      />
-                    </div>
-                  </div>
-                </div>
-                {/* Venue Location */}
-                <div className="w-full sm:w-1/2">
-                  <label
-                    className="mb-3 block text-sm font-medium text-black dark:text-white"
-                    htmlFor="venuelocation"
-                  >
-                    Venue Location
+                <div className="mb-4.5">
+                  <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+                    Subject
                   </label>
-                  <div className="relative">
-
-                    <input
-                      className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-                      type="text"
-                      name="VenueLocation"
-                      id="VenueLocation"
-                      placeholder="Venue Location"
-                      defaultValue=""
-                    />
-                  </div>
+                  <input
+                    type="text"
+                    placeholder="Enter subject"
+                    className="w-full rounded border border-stroke bg-gray py-3 pl-11.5 pr-4.5 text-black focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+                  />
                 </div>
 
 
@@ -268,7 +181,7 @@ const ContactForm = () => {
                       name="bio"
                       id="bio"
                       rows={6}
-                      placeholder="Enter additional details or special requirements"
+                      placeholder="Enter additional Inquiry details"
                       defaultValue=""
                     ></textarea>
                   </div>
