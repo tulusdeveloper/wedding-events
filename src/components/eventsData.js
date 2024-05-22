@@ -74,6 +74,9 @@ const events = [
           '/images/events/event1.jpg',
           '/images/events/event2.jpg',
           '/images/events/event3.jpg',
+          '/images/events/event1.jpg',
+          '/images/events/event2.jpg',
+          '/images/events/event3.jpg',
         ],
       },
   ];

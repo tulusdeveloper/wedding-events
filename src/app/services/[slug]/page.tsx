@@ -34,7 +34,7 @@ const ServiceDetails = () => {
   const title = searchParams.get('title') || 'Default Title';
   const description = searchParams.get('description') || 'Default Description';
   const additionalDetails: AdditionalDetails = JSON.parse(searchParams.get('additionalDetails') || '{}');
-  
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAnswer = (index: number) => {

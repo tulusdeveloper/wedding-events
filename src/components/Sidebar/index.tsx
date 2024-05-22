@@ -142,6 +142,19 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 </Link>
               </li>
               {/* <!-- Menu Item Services --> */}
+              
+              {/* <!-- Menu Item Reservation --> */}
+               <li>
+                <Link
+                  href="/reservation"
+                  className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-black dark:text-white duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes("contact") &&
+                    "bg-graydark dark:bg-meta-4"
+                    }`}
+                >
+                  RESERVATION 
+                </Link>
+              </li>
+              {/* <!-- Menu Item Reservation --> */}
 
               {/* <!-- Menu Item Contact --> */}
               <li>
@@ -155,6 +168,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 </Link>
               </li>
               {/* <!-- Menu Item Contact --> */}
+              
             </ul>
           </div>
 
